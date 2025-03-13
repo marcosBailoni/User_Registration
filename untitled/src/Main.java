@@ -60,16 +60,16 @@ public class Main {
                         }
 
                         try (BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\temp\\Registro_Usuario\\arquivos\\usuarios\\" + userCount + "-" + user.getName().strip().toUpperCase().strip() + ".txt"))){
-                            for(int j = 0; j < userAnswers.size(); j++) {
-                                bw.write(userAnswers.get(j));
+                            for (String userAnswer : userAnswers) {
+                                bw.write(userAnswer);
                                 bw.newLine();
                             }
                             userCount++;
                         }
-
                         System.out.println(user + "\n");
 
                     case 2:
+                        Reader.printUsers();
                 }
 
             }
